@@ -6,6 +6,7 @@ echo '==========================================================================
 echo 'load pg_denormalized'
 echo '================================================================================'
 # FIXME: implement this
+echo "$files" | time parallel bash load_denormalized.sh
 
 echo '================================================================================'
 echo 'load pg_normalized'
