@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 files=$(find data/*)
 
@@ -6,7 +6,7 @@ echo '==========================================================================
 echo 'load denormalized'
 echo '================================================================================'
 for file in $files; do
-    time bash load_denormalized.sh $file
+    time sh load_denormalized.sh $file
 done
 
 echo '================================================================================'
