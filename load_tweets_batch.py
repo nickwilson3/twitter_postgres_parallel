@@ -1,5 +1,13 @@
 #!/usr/bin/python3
 
+# process command line args
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument('--db',required=True)
+parser.add_argument('--inputs',nargs='+',required=True)
+parser.add_argument('--print_every',type=int,default=1000)
+args = parser.parse_args()
+
 # imports
 import psycopg2
 import sqlalchemy
